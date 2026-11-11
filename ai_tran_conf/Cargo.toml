@@ -1,0 +1,24 @@
+[package]
+name = "ai_tran_conf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+description = "解析 aii18n.nt 任务配置（NestedText）"
+keywords = ["i18n", "config", "nestedtext"]
+categories = ["config", "text-processing"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+ai_i18n_lang = { version = "0.1.0", path = "../ai_i18n_lang" }
+nested-text = { version = "0.1.0", default-features = false, features = ["serde"] }
+serde = { version = "1.0.229", default-features = false, features = ["derive", "std"] }
+strum = "0.28.0"
+thiserror = "2.0.21"
+
+[dev-dependencies]
+strum = "0.28.0"

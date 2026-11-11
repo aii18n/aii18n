@@ -1,0 +1,9 @@
+-
+  dir: a
+  from: zh
+  to:
+    - en
+-
+  dir: b
+  from: en
+  to: zh

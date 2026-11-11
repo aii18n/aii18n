@@ -1,0 +1,5 @@
+-
+  dir: ./i18n
+  from: zh
+  to:
+    - en

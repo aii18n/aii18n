@@ -1,0 +1,24 @@
+[package]
+name = "ai_i18n_db"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+description = "纯文本、可 diff 的 i18n 数据库（只追加 + 流式压实）"
+keywords = ["i18n", "database", "append-only"]
+categories = ["database", "text-processing"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+async-lock = "3.5.0"
+compio = { version = "0.19.2", features = ["fs", "io", "macros"] }
+gxhash = "3.5.0"
+memchr = "2.8.3"
+thiserror = "2.0.21"
+
+[dev-dependencies]
+tempfile = "3.27.0"

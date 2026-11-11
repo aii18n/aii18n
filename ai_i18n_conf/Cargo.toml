@@ -1,0 +1,29 @@
+[package]
+name = "ai_i18n_conf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "ai_i18n_conf"
+keywords = []
+categories = []
+
+[features]
+default = []
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+ai_api = { version = "0.1.0", path = "../ai_api" }
+confdir = "0.1.4"
+nested-text = { version = "0.1.0", default-features = false, features = ["serde"] }
+serde = { version = "1.0.229", default-features = false, features = ["derive", "std"] }
+thiserror = "2.0.21"
+
+[dev-dependencies]
+aok = "0.1.18"
+ctor = "1.0.13"
+log = "0.4.35"
+log_init = "0.1.40"

@@ -1,0 +1,9 @@
+-
+  dir: drop
+  to:
+    - en
+-
+  dir: keep
+  from: en
+  to:
+    - zh

@@ -1,0 +1,32 @@
+[workspace]
+resolver = "3"
+members = [
+  "ai_i18n_conf",
+  "ai_i18n_lang",
+  "ai_api",
+  "ai_i18n_tran",
+  "md_prefix",
+  "ai_i18n_parse",
+  "ai_i18n_db",
+  "ai_tran_conf",
+  "aitran",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+repository = "https://github.com/aii18n/aii18n"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+overflow-checks = false
+
+[profile.bench]
+opt-level = 3
+lto = "fat"
+codegen-units = 1

@@ -1,0 +1,30 @@
+[package]
+name = "ai_i18n_tran"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "ai_i18n_tran"
+keywords = []
+categories = []
+
+[features]
+default = []
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+ai_api = { version = "0.1.0", path = "../ai_api" }
+ai_i18n_conf = { version = "0.1.0", path = "../ai_i18n_conf" }
+ai_i18n_parse = { version = "0.1.0", path = "../ai_i18n_parse" }
+thiserror = "2.0.21"
+
+[dev-dependencies]
+aok = "0.1.18"
+compio = { version = "0.19.2", features = ["macros"] }
+ctor = "1.0.13"
+log_init = "0.1.40"
+sonic-rs = "0.5.10"
+

@@ -1,0 +1,20 @@
+[package]
+name = "ai_i18n_parse"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "翻译文本解析、过滤与提示词"
+keywords = ["i18n", "translate", "markdown"]
+categories = ["text-processing"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+itoa = "1.0.19"
+md_prefix = { version = "0.1.0", path = "../md_prefix" }
+
+[build-dependencies]
+unicode-general-category = "1.1.0"

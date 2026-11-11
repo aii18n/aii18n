@@ -1,0 +1,54 @@
+[package]
+name = "ai_api"
+description = "ai_api"
+keywords = [ ]
+categories = [ ]
+
+[package.version]
+workspace = true
+
+[package.edition]
+workspace = true
+
+[package.license]
+workspace = true
+
+[package.repository]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = [ "--cfg", "docsrs" ]
+
+[features]
+default = [ ]
+
+[dependencies]
+compio-tls = "0.10.0"
+fastrand = "2.5.0"
+futures-util = "0.3.34"
+hipstr = { version = "0.8.0", features = ["serde"] }
+log = "0.4.35"
+memchr = "2.8.3"
+smallvec = { version = "1.16.5", features = ["serde"] }
+sonic-rs = "0.5.10"
+thiserror = "2.0.21"
+url = "2.5.8"
+
+[dependencies.compio]
+version = "0.19.2"
+features = [ "net", "time", "macros" ]
+
+[dependencies.serde]
+version = "1.0.229"
+features = [ "derive" ]
+
+[dev-dependencies]
+aok = "0.1.18"
+ctor = "1.0.13"
+log = "0.4.35"
+log_init = "0.1.40"
+
+[dev-dependencies.ai_i18n_conf]
+path = "../ai_i18n_conf"
+version = "0.1.0"

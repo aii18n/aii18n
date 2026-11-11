@@ -1,0 +1,9 @@
+-
+  from: zh
+  to:
+    - en
+-
+  dir: keep
+  from: en
+  to:
+    - zh
